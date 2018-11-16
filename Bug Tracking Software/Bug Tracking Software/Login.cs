@@ -64,5 +64,17 @@ namespace Bug_Tracking_Software
                 }
             }
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            formSignUp sUp = new formSignUp();
+            sUp.Show();
+        }
     }
 }
