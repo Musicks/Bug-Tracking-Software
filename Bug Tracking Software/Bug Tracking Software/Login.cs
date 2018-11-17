@@ -46,12 +46,13 @@ namespace Bug_Tracking_Software
                     Admin A = new Admin(dt.Rows[0][0].ToString());
                     A.Show();
                 }
-                /*
+                
                 else if (dt.Rows[0][0].ToString() == "User")
                 {
                     User U = new User(dt.Rows[0][0].ToString());
                     U.Show();
                 }
+                /*
                 else
                 {
                     Programmer P = new Programmer(dt.Rows[0][0].ToString());
