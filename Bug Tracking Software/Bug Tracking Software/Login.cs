@@ -21,7 +21,8 @@ namespace Bug_Tracking_Software
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            label4.Hide();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -38,8 +39,7 @@ namespace Bug_Tracking_Software
             if (dt.Rows.Count == 1)
             {
                 this.Hide();
-                //Form2 f2 = new Form2(dt.Rows[0][0].ToString());
-                //f2.Show();
+               
 
                 if (dt.Rows[0][0].ToString() == "Admin")
                 {
@@ -52,16 +52,18 @@ namespace Bug_Tracking_Software
                     User U = new User(dt.Rows[0][0].ToString());
                     U.Show();
                 }
-                else if (dt.Rows[0][0].ToString() == "Programmer")
+                else
                 {
                     Programmer P = new Programmer(dt.Rows[0][0].ToString());
                     P.Show();
                 }
                 */
-                else
-                {
-                    MessageBox.Show("Error!!! Login Again");
-                }
+               
+            }
+            else
+            {
+                label4.Show();
+                label4.Text = "Error!!! Login Again";
             }
         }
 
@@ -75,6 +77,11 @@ namespace Bug_Tracking_Software
             this.Hide();
             formSignUp sUp = new formSignUp();
             sUp.Show();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
