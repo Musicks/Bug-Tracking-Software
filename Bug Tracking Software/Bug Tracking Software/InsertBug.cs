@@ -52,7 +52,7 @@ namespace Bug_Tracking_Software
             images = brs.ReadBytes((int)Streem.Length);
 
             connection.Open();
-            String sqlQuery = "Insert into BugReport(AppName, BugName, Description, Image)Values('"+textBox1.Text+"','"+textBox2.Text+"','"+txtDes.Text+"',@images)";
+            String sqlQuery = "Insert into BugReport(AppName, BugName, Description, Image)Values('"+comboBox1.Text+"','"+textBox2.Text+"','"+txtDes.Text+"',@images)";
             cmd = new SqlCommand(sqlQuery, connection);
             cmd.Parameters.Add(new SqlParameter("@images",images));
             int N = cmd.ExecuteNonQuery();
@@ -66,6 +66,11 @@ namespace Bug_Tracking_Software
             this.Hide();
             Login Log = new Login();
             Log.Show();
+        }
+
+        private void textBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

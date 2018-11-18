@@ -52,13 +52,13 @@ namespace Bug_Tracking_Software
                     User U = new User(dt.Rows[0][0].ToString());
                     U.Show();
                 }
-                /*
+                
                 else
                 {
-                    Programmer P = new Programmer(dt.Rows[0][0].ToString());
+                    Programmer P = new Programmer();
                     P.Show();
                 }
-                */
+                
                
             }
             else
