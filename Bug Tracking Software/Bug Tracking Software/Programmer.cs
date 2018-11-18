@@ -33,5 +33,10 @@ namespace Bug_Tracking_Software
             Login Log = new Login();
             Log.Show();
         }
+
+        private void Programmer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

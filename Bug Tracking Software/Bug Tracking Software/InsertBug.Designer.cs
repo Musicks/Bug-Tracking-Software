@@ -147,10 +147,10 @@
             this.txtDes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDes.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDes.Location = new System.Drawing.Point(137, 178);
+            this.txtDes.Location = new System.Drawing.Point(122, 178);
             this.txtDes.Multiline = true;
             this.txtDes.Name = "txtDes";
-            this.txtDes.Size = new System.Drawing.Size(430, 164);
+            this.txtDes.Size = new System.Drawing.Size(282, 164);
             this.txtDes.TabIndex = 8;
             // 
             // label4
@@ -185,9 +185,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(239, 348);
+            this.pictureBox1.Location = new System.Drawing.Point(445, 55);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 53);
+            this.pictureBox1.Size = new System.Drawing.Size(175, 287);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;

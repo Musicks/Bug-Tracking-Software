@@ -45,5 +45,13 @@ namespace Bug_Tracking_Software
             Login Log = new Login();
             Log.Show();
         }
+
+        private void solutionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Open1 op1 = new Open1();
+            op1.Show();
+
+        }
     }
 }

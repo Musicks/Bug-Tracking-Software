@@ -52,12 +52,12 @@ namespace Bug_Tracking_Software
             images = brs.ReadBytes((int)Streem.Length);
 
             connection.Open();
-            String sqlQuery = "Insert into BugReport(AppName, BugName, Description, Image)Values('"+comboBox1.Text+"','"+textBox2.Text+"','"+txtDes.Text+"',@images)";
+            String sqlQuery = "Insert into BugReport(AppName, BugName, Description,Image)Values('" + comboBox1.Text+"','"+textBox2.Text+"','"+txtDes.Text+ "',@images)";
             cmd = new SqlCommand(sqlQuery, connection);
             cmd.Parameters.Add(new SqlParameter("@images",images));
             int N = cmd.ExecuteNonQuery();
             connection.Close();
-            MessageBox.Show(N.ToString() + "Data Saved Sucessfully");
+            MessageBox.Show(N.ToString() + " Data Saved Sucessfully");
 
         }
 

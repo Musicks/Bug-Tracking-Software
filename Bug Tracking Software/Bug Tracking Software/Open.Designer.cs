@@ -139,13 +139,13 @@
             // solutionToolStripMenuItem
             // 
             this.solutionToolStripMenuItem.Name = "solutionToolStripMenuItem";
-            this.solutionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.solutionToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.solutionToolStripMenuItem.Text = "Solution";
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.signOutToolStripMenuItem.Text = "Sign Out";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
@@ -163,6 +163,7 @@
             this.button1.TabIndex = 27;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox4
             // 

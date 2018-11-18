@@ -75,6 +75,7 @@
             this.solutionToolStripMenuItem.Name = "solutionToolStripMenuItem";
             this.solutionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.solutionToolStripMenuItem.Text = "Solution";
+            this.solutionToolStripMenuItem.Click += new System.EventHandler(this.solutionToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 

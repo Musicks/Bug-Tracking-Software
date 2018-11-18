@@ -34,9 +34,9 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.liveRepoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.liveRepoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -77,25 +77,25 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
-            // liveRepoToolStripMenuItem
-            // 
-            this.liveRepoToolStripMenuItem.Name = "liveRepoToolStripMenuItem";
-            this.liveRepoToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.liveRepoToolStripMenuItem.Text = "Live Repo";
-            // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.openToolStripMenuItem.Text = "Open ";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.signOutToolStripMenuItem.Text = "Sign Out";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
+            // 
+            // liveRepoToolStripMenuItem
+            // 
+            this.liveRepoToolStripMenuItem.Name = "liveRepoToolStripMenuItem";
+            this.liveRepoToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.liveRepoToolStripMenuItem.Text = "Live Repo";
             // 
             // Programmer
             // 
@@ -107,6 +107,7 @@
             this.IsMdiContainer = true;
             this.Name = "Programmer";
             this.Text = "Programmer";
+            this.Load += new System.EventHandler(this.Programmer_Load);
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
