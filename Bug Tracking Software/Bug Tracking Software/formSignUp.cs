@@ -27,19 +27,26 @@ namespace Bug_Tracking_Software
         {
             if (textPassword.Text == textPassword1.Text)
             {
-
-                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Baula\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
-                String str = "insert into Login(Username, Password, Cpassword, Role) values('" + textUsername.Text + "','" + textPassword.Text + "', '" +textPassword1.Text + "', '" + textRole.Text + "')";
-                con.Open();
-                SqlCommand cmd = new SqlCommand(str, con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("You are now registered");
+                if (textRole.Text.ToLower().Equals("admin"))
+                {
+                    MessageBox.Show("You cant register as ADMIN");
+                }
+                else
+                {
+                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Baula\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
+                    String str = "insert into Login(Username, Password, Cpassword, Role) values('" + textUsername.Text + "','" + textPassword.Text + "', '" + textPassword1.Text + "', '" + textRole.Text + "')";
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand(str, con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("You are now registered");
+                }
             }
             else
             {
                 label5.Show();
                 label5.Text = "Password do not match";
             }
+            
 
         }
 

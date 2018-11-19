@@ -42,8 +42,9 @@ namespace Bug_Tracking_Software
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             connection.Open();
-            string sqlQuery = "select * from BugReport where AppName='" + textBox1.Text + "'";
+            string sqlQuery = "select * from BugReport where AppName='" + textBox1.Text+"'";
 
             cmd = new SqlCommand(sqlQuery, connection);
             SqlDataReader DataRead = cmd.ExecuteReader();
@@ -56,8 +57,7 @@ namespace Bug_Tracking_Software
                 textBox3.Text = DataRead[2].ToString();
                
                 byte[] images = (byte[])DataRead[3];
-                 textBox4.Text = DataRead[4].ToString();
-                
+                //textBox4.Text = DataRead[4].ToString();                
                 if (images == null)
                 {
                     pictureBox1.Image = null;
@@ -67,13 +67,33 @@ namespace Bug_Tracking_Software
                     MemoryStream mstreem = new MemoryStream(images);
                     pictureBox1.Image = Image.FromStream(mstreem);
                 }
+                connection.Close();
+
+                //New COde
+                connection.Open();
+                string sqlQuery1 = "select * from Soln where AppName='" + textBox1.Text + "'";
+
+                SqlCommand cmd2 = new SqlCommand(sqlQuery1, connection);
+                SqlDataReader DataRead1 = cmd2.ExecuteReader();
+                DataRead1.Read();
+                if (DataRead1.HasRows)
+                {
+                    textBox4.Text = DataRead1[1].ToString();
+                }
+                connection.Close();
+                //New Code
 
             }
             else
             {
                 MessageBox.Show("This data is not available");
             }
-            connection.Close();
+            
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

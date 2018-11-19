@@ -16,9 +16,7 @@ namespace Bug_Tracking_Software
 {
     public partial class Open : Form
     {
-        SqlConnection con = new SqlConnection();
         SqlCommand cmd;
-        //string connection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Baula\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30";
         public Open()
         {
             InitializeComponent();
@@ -84,11 +82,23 @@ namespace Bug_Tracking_Software
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            /*SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Baula\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
+            String str = "update BugReport(Solution) values('" +textBox4.Text+ "')where Solution='"+textBox4.Text+"'";
             connection.Open();
-            String sqlQuery = "update BugReport(Solution)Values('"+ textBox4 .Text+ "')";
-         
+            SqlCommand cmda = new SqlCommand(str, connection);
+            cmda.ExecuteNonQuery();
+            MessageBox.Show("Answer is uploaded");
             connection.Close();
-            MessageBox.Show("Data Saved Sucessfully");
+            */
+           
+                SqlConnection connection1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Baula\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
+                connection1.Open();
+                cmd = new SqlCommand("insert into Soln (AppName,Solution)values('"+textBox1.Text+"','" + textBox4.Text + "')",connection1);
+                
+                cmd.ExecuteNonQuery();
+                connection1.Close();
+                MessageBox.Show("Updated");
             
         }
     }
