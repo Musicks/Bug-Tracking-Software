@@ -16,10 +16,12 @@ namespace Bug_Tracking_Software
 {
     public partial class Open : Form
     {
+        String userName;
         SqlCommand cmd;
-        public Open()
+        public Open(String userName)
         {
             InitializeComponent();
+            this.userName = userName;
         }
 
         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Baula\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
@@ -47,7 +49,7 @@ namespace Bug_Tracking_Software
         private void button2_Click(object sender, EventArgs e)
         {
             connection.Open();
-            string sqlQuery = "select * from BugReport where AppName='" + textBox1.Text + "'";
+            string sqlQuery = "select * from BugReport where AppName='" + textBox1.Text + "' AND AssignTo = '" + userName + "'";
 
             cmd = new SqlCommand(sqlQuery, connection);
             SqlDataReader DataRead = cmd.ExecuteReader();

@@ -12,10 +12,11 @@ namespace Bug_Tracking_Software
 {
     public partial class Programmer : Form
     {
-
-        public Programmer()
+        String userName;
+        public Programmer(String userName, String role)
         {
             InitializeComponent();
+            this.userName = userName;
         }
 
         
@@ -23,7 +24,7 @@ namespace Bug_Tracking_Software
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Open Op = new Open();
+            Open Op = new Open(userName);
             Op.Show();
         }
 

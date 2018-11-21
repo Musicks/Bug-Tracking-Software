@@ -22,5 +22,29 @@ namespace Bug_Tracking_Software
         {
             this.Close();
         }
+
+        private void Admin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Admin_User aUser = new Admin_User();
+            aUser.Show();
+        }
+
+        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login Lo = new Login();
+            Lo.Show();
+        }
+
+        private void bugsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdminAppoint AdminBug = new AdminAppoint();
+            AdminBug.Show();
+        }
     }
 }

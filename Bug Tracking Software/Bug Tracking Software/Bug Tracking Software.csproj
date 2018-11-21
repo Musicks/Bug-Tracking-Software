@@ -56,6 +56,18 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminAppoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAppoint.Designer.cs">
+      <DependentUpon>AdminAppoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_User.Designer.cs">
+      <DependentUpon>Admin_User.cs</DependentUpon>
+    </Compile>
     <Compile Include="formSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +114,12 @@
     </Compile>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminAppoint.resx">
+      <DependentUpon>AdminAppoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_User.resx">
+      <DependentUpon>Admin_User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formSignUp.resx">
       <DependentUpon>formSignUp.cs</DependentUpon>

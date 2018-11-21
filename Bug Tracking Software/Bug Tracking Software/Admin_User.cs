@@ -12,22 +12,23 @@ using System.Data.SqlClient;
 
 namespace Bug_Tracking_Software
 {
-    public partial class formSignUp : Form
+    public partial class Admin_User : Form
     {
-        public formSignUp()
+        public Admin_User()
         {
             InitializeComponent();
         }
-        private void formSignuUp_Load(object sender, EventArgs e)
+
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            label5.Hide();
+            this.Close();
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             if (textPassword.Text == textPassword1.Text)
             {
-          
+                
                     SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Baula\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
                     String str = "insert into Login(Username, Password, Cpassword, Role) values('" + textUsername.Text + "','" + textPassword.Text + "', '" + textPassword1.Text + "', '" + textRole.Text + "')";
                     con.Open();
@@ -41,30 +42,19 @@ namespace Bug_Tracking_Software
                 label5.Show();
                 label5.Text = "Password do not match";
             }
-            
+
 
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void Admin_User_Load(object sender, EventArgs e)
         {
-            this.Hide();
-            Login Log = new Login();
-            Log.Show();
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            label5.Hide();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textRole_TextChanged(object sender, EventArgs e)
-        {
-
+            
         }
     }
+    
 }

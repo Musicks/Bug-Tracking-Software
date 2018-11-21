@@ -43,19 +43,19 @@ namespace Bug_Tracking_Software
 
                 if (dt.Rows[0][0].ToString() == "Admin")
                 {
-                    Admin A = new Admin(dt.Rows[0][0].ToString());
+                    Admin A = new Admin("Admin");
                     A.Show();
                 }
                 
                 else if (dt.Rows[0][0].ToString() == "User")
                 {
-                    User U = new User(dt.Rows[0][0].ToString());
+                    User U = new User("User");
                     U.Show();
                 }
                 
                 else
                 {
-                    Programmer P = new Programmer();
+                    Programmer P = new Programmer(textBox1.Text, "Programmer");
                     P.Show();
                 }
                 
