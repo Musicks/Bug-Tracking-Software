@@ -66,21 +66,21 @@
             // insertBugToolStripMenuItem
             // 
             this.insertBugToolStripMenuItem.Name = "insertBugToolStripMenuItem";
-            this.insertBugToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.insertBugToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.insertBugToolStripMenuItem.Text = "Insert Bug";
             this.insertBugToolStripMenuItem.Click += new System.EventHandler(this.insertBugToolStripMenuItem_Click);
             // 
             // solutionToolStripMenuItem
             // 
             this.solutionToolStripMenuItem.Name = "solutionToolStripMenuItem";
-            this.solutionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.solutionToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.solutionToolStripMenuItem.Text = "Solution";
             this.solutionToolStripMenuItem.Click += new System.EventHandler(this.solutionToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.signOutToolStripMenuItem.Text = "Sign Out";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
@@ -89,6 +89,7 @@
             this.liveRepoToolStripMenuItem.Name = "liveRepoToolStripMenuItem";
             this.liveRepoToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.liveRepoToolStripMenuItem.Text = "Live Repo";
+            this.liveRepoToolStripMenuItem.Click += new System.EventHandler(this.liveRepoToolStripMenuItem_Click);
             // 
             // statusStrip
             // 
