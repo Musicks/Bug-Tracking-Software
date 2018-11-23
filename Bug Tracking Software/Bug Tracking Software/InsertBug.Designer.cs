@@ -141,7 +141,7 @@
             this.textBox2.Location = new System.Drawing.Point(137, 112);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(267, 20);
-            this.textBox2.TabIndex = 6;
+            this.textBox2.TabIndex = 1;
             // 
             // txtDes
             // 
@@ -152,7 +152,7 @@
             this.txtDes.Multiline = true;
             this.txtDes.Name = "txtDes";
             this.txtDes.Size = new System.Drawing.Size(282, 164);
-            this.txtDes.TabIndex = 8;
+            this.txtDes.TabIndex = 2;
             // 
             // label4
             // 
@@ -169,7 +169,7 @@
             this.button1.Location = new System.Drawing.Point(137, 378);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Browse";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -179,7 +179,7 @@
             this.button2.Location = new System.Drawing.Point(137, 420);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(202, 34);
-            this.button2.TabIndex = 12;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Save";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -199,7 +199,7 @@
             this.comboBox1.Location = new System.Drawing.Point(137, 55);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(267, 21);
-            this.comboBox1.TabIndex = 16;
+            this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.textBox1_SelectedIndexChanged);
             // 
             // InsertBug

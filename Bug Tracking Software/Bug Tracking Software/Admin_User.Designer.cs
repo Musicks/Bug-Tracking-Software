@@ -55,7 +55,7 @@
             this.btnSignUp.Location = new System.Drawing.Point(76, 271);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(105, 37);
-            this.btnSignUp.TabIndex = 37;
+            this.btnSignUp.TabIndex = 4;
             this.btnSignUp.Text = "Sign Up";
             this.btnSignUp.UseVisualStyleBackColor = true;
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
@@ -65,7 +65,7 @@
             this.btnExit.Location = new System.Drawing.Point(237, 271);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(105, 37);
-            this.btnExit.TabIndex = 38;
+            this.btnExit.TabIndex = 5;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -75,28 +75,28 @@
             this.textRole.Location = new System.Drawing.Point(160, 220);
             this.textRole.Name = "textRole";
             this.textRole.Size = new System.Drawing.Size(173, 20);
-            this.textRole.TabIndex = 36;
+            this.textRole.TabIndex = 3;
             // 
             // textPassword1
             // 
             this.textPassword1.Location = new System.Drawing.Point(160, 177);
             this.textPassword1.Name = "textPassword1";
             this.textPassword1.Size = new System.Drawing.Size(173, 20);
-            this.textPassword1.TabIndex = 35;
+            this.textPassword1.TabIndex = 2;
             // 
             // textPassword
             // 
             this.textPassword.Location = new System.Drawing.Point(160, 127);
             this.textPassword.Name = "textPassword";
             this.textPassword.Size = new System.Drawing.Size(173, 20);
-            this.textPassword.TabIndex = 34;
+            this.textPassword.TabIndex = 1;
             // 
             // textUsername
             // 
             this.textUsername.Location = new System.Drawing.Point(160, 79);
             this.textUsername.Name = "textUsername";
             this.textUsername.Size = new System.Drawing.Size(173, 20);
-            this.textUsername.TabIndex = 33;
+            this.textUsername.TabIndex = 0;
             // 
             // label4
             // 

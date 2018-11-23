@@ -45,7 +45,7 @@
             this.label3.Location = new System.Drawing.Point(-3, 358);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 13);
-            this.label3.TabIndex = 5;
+            this.label3.TabIndex = 1;
             this.label3.Text = "Role";
             // 
             // button1
@@ -53,7 +53,7 @@
             this.button1.Location = new System.Drawing.Point(485, 340);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(81, 31);
-            this.button1.TabIndex = 4;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Exit";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -66,7 +66,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(566, 24);
-            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem

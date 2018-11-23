@@ -48,7 +48,7 @@
             this.statusStrip.Location = new System.Drawing.Point(0, 367);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(632, 22);
-            this.statusStrip.TabIndex = 2;
+            this.statusStrip.TabIndex = 1;
             this.statusStrip.Text = "StatusStrip";
             // 
             // toolStripStatusLabel
@@ -65,7 +65,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(632, 24);
-            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "MenuStrip";
             // 
             // fileToolStripMenuItem
