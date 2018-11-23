@@ -10,12 +10,14 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.IO;
 using System.Data.SqlClient;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
 namespace Bug_Tracking_Software
 {
     public partial class AdminAppoint : Form
     {
-
+       
         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Baula\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
         SqlCommand cmd;
         public AdminAppoint()
@@ -49,6 +51,7 @@ namespace Bug_Tracking_Software
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //shows all the bugs when the button is clicked
             connection.Open();
             string sqlQuery = "select AppName, BugName, Description from BugReport where AppName='" + textBox1.Text + "'";
 
@@ -74,6 +77,19 @@ namespace Bug_Tracking_Software
         private void AdminAppoint_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void liveRepoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //opens a live repo website in chrome
+            IWebDriver driver = new ChromeDriver();
+
+            driver.Url = "https://github.com/login";
+
+
+            driver.FindElement(By.Id("login_field")).SendKeys("breakdowns.blasts@gmail.com");
+            driver.FindElement(By.Id("password")).SendKeys("Khadka15");
+            driver.FindElement(By.Name("commit")).Click();
         }
     }
 }

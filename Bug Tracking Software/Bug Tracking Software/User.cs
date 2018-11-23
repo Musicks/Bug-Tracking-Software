@@ -36,6 +36,7 @@ namespace Bug_Tracking_Software
 
         private void insertBugToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //closes the form and opens InsertBug form
             this.Close();
             InsertBug bug = new InsertBug();
             bug.Show();
@@ -43,6 +44,7 @@ namespace Bug_Tracking_Software
 
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //hides the form and opens Login form
             this.Hide();
             Login Log = new Login();
             Log.Show();
@@ -50,6 +52,7 @@ namespace Bug_Tracking_Software
 
         private void solutionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //hides the form and opens solution form
             this.Hide();
             Open1 op1 = new Open1();
             op1.Show();
@@ -58,6 +61,7 @@ namespace Bug_Tracking_Software
 
         private void liveRepoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //opens a live repo website in chrome
             IWebDriver driver = new ChromeDriver();
            
             driver.Url = "https://github.com/login";

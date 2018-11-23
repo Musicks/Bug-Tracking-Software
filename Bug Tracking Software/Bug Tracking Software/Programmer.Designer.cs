@@ -96,6 +96,7 @@
             this.liveRepoToolStripMenuItem.Name = "liveRepoToolStripMenuItem";
             this.liveRepoToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.liveRepoToolStripMenuItem.Text = "Live Repo";
+            this.liveRepoToolStripMenuItem.Click += new System.EventHandler(this.liveRepoToolStripMenuItem_Click);
             // 
             // Programmer
             // 

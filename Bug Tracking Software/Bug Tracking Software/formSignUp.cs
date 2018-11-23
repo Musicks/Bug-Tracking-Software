@@ -20,11 +20,13 @@ namespace Bug_Tracking_Software
         }
         private void formSignuUp_Load(object sender, EventArgs e)
         {
+            //hides the lable when the form loads up
             label5.Hide();
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
+            //checking if the password matches or not
             if (textPassword.Text == textPassword1.Text)
             {
           
@@ -47,6 +49,7 @@ namespace Bug_Tracking_Software
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            //hides the label and opens login page
             this.Hide();
             Login Log = new Login();
             Log.Show();
@@ -54,7 +57,7 @@ namespace Bug_Tracking_Software
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();//closes when user clicks the button
         }
 
         private void label5_Click(object sender, EventArgs e)

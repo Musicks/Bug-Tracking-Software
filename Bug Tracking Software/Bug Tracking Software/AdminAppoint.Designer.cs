@@ -45,6 +45,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.txtAssignTO = new System.Windows.Forms.TextBox();
+            this.liveRepoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +53,8 @@
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
+            this.fileToolStripMenuItem,
+            this.liveRepoToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(453, 24);
@@ -181,6 +183,13 @@
             this.txtAssignTO.Size = new System.Drawing.Size(133, 20);
             this.txtAssignTO.TabIndex = 34;
             // 
+            // liveRepoToolStripMenuItem
+            // 
+            this.liveRepoToolStripMenuItem.Name = "liveRepoToolStripMenuItem";
+            this.liveRepoToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.liveRepoToolStripMenuItem.Text = "Live Repo";
+            this.liveRepoToolStripMenuItem.Click += new System.EventHandler(this.liveRepoToolStripMenuItem_Click);
+            // 
             // AdminAppoint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,6 +240,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.TextBox txtAssignTO;
+        private System.Windows.Forms.ToolStripMenuItem liveRepoToolStripMenuItem;
     }
 }
 

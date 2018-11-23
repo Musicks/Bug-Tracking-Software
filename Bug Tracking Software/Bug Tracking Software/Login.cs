@@ -21,17 +21,18 @@ namespace Bug_Tracking_Software
 
         private void Login_Load(object sender, EventArgs e)
         {
-            label4.Hide();
+            label4.Hide(); //hiding the label when form loads
             
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();//closes when user clicks the button
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Login part when the user Logs in
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Baula\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
             SqlDataAdapter sda = new SqlDataAdapter("select Role from Login where Username='" + textBox1.Text + "' and Password='" + textBox2.Text + "' ", con);
             DataTable dt = new System.Data.DataTable();
@@ -63,6 +64,7 @@ namespace Bug_Tracking_Software
             }
             else
             {
+                //shows error when there is a mistake in Login 
                 label4.Show();
                 label4.Text = "Error!!! Login Again";
             }
@@ -75,6 +77,7 @@ namespace Bug_Tracking_Software
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            //opens new form named formSignUp
             this.Hide();
             formSignUp sUp = new formSignUp();
             sUp.Show();

@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
 namespace Bug_Tracking_Software
 {
@@ -44,12 +46,12 @@ namespace Bug_Tracking_Software
         {
 
             connection.Open();
-            string sqlQuery = "select * from BugReport where AppName='" + textBox1.Text+"'";
+            string sqlQuery = "select * from BugReport where AppName='" + textBox1.Text+"'";//shows all data from  BugReport where AppName=textBox1.Text
 
             cmd = new SqlCommand(sqlQuery, connection);
             SqlDataReader DataRead = cmd.ExecuteReader();
             DataRead.Read();
-
+            //shows all the datas in their respective fields
             if (DataRead.HasRows)
             {
                 textBox1.Text = DataRead[0].ToString();
@@ -57,7 +59,7 @@ namespace Bug_Tracking_Software
                 textBox3.Text = DataRead[2].ToString();
                
                 byte[] images = (byte[])DataRead[3];
-                //textBox4.Text = DataRead[4].ToString();                
+                      
                 if (images == null)
                 {
                     pictureBox1.Image = null;
@@ -69,9 +71,9 @@ namespace Bug_Tracking_Software
                 }
                 connection.Close();
 
-                //New COde
+                //database connection
                 connection.Open();
-                string sqlQuery1 = "select * from Soln where AppName='" + textBox1.Text + "'";
+                string sqlQuery1 = "select * from Soln where AppName='" + textBox1.Text + "'";//shows all the datas from solution table where AppName=textBox1.Text
 
                 SqlCommand cmd2 = new SqlCommand(sqlQuery1, connection);
                 SqlDataReader DataRead1 = cmd2.ExecuteReader();
@@ -81,7 +83,7 @@ namespace Bug_Tracking_Software
                     textBox4.Text = DataRead1[1].ToString();
                 }
                 connection.Close();
-                //New Code
+              
 
             }
             else
@@ -94,6 +96,20 @@ namespace Bug_Tracking_Software
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void liveRepoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //opens a live repo website in chrome
+            IWebDriver driver = new ChromeDriver();
+
+            driver.Url = "https://github.com/login";
+
+
+            driver.FindElement(By.Id("login_field")).SendKeys("breakdowns.blasts@gmail.com");
+            driver.FindElement(By.Id("password")).SendKeys("Khadka15");
+            driver.FindElement(By.Name("commit")).Click();
 
         }
     }
